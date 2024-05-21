@@ -224,7 +224,7 @@ SNnmxzdpR6pYJGbEDdFyZFe5xHRWSlrC3WTbzg==
         },
       }
     }
-    'yakkety', 'zesty', 'bionic': {
+    'yakkety', 'zesty': {
       fail("Ubuntu ${::lsbdistcodename} is not supported by this module yet")
     }
     # TODO : Remove old and unsupported versions
@@ -235,7 +235,9 @@ SNnmxzdpR6pYJGbEDdFyZFe5xHRWSlrC3WTbzg==
         'stretch' => 911,
         'xenial'  => 911,
         'bionic'  => 940,
-        default   => 950,
+        'focal'   => 10300,
+        'jammy'   => 11010,
+        default   => 11010,
       }
 
       apt::source{'dell':
