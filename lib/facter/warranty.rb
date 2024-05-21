@@ -152,7 +152,7 @@ Facter.add('warranty') do
     end
 
     # refresh cache daily
-    if File.exists?(cache_file) and Time.now < File.stat(cache_file).mtime + 86400 * 1
+    if File.exist?(cache_file) and Time.now < File.stat(cache_file).mtime + 86400 * 1
       Facter.debug('warranty cache: Valid')
     else
       Facter.debug('warranty cache: Outdated, recreating')
@@ -182,7 +182,7 @@ Facter.add('warranty_expiration') do
       cache_file = 'C:\ProgramData\PuppetLabs\puppet\var\facts\facter_warranty.fact'
     end
 
-    if !File.exists?(cache_file)
+    if !File.exist?(cache_file)
       next false
     end
 
@@ -204,7 +204,7 @@ Facter.add('warranty_start') do
       cache_file = 'C:\ProgramData\PuppetLabs\puppet\var\facts\facter_warranty.fact'
     end
 
-    if !File.exists?(cache_file)
+    if !File.exist?(cache_file)
       next false
     end
 

@@ -4,6 +4,10 @@
 # Install Dell API data where the fact can access it
 # Used by the fact in this module
 #
+# @param api_key
+#
+# @param file_mode
+#
 class dell::warranty (
   Optional[String] $client_id     = undef,
   Optional[String] $client_secret = undef,
